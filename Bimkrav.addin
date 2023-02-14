@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Bimkrav</Name>
+		<Assembly>Bimkrav\BimKravRvt.v23.0.dll</Assembly>
+		<AddInId>4b43535e-ac3b-4b06-90c8-9c8a00cf0350</AddInId>
+		<FullClassName>BimkravRvt.App</FullClassName>
+		<VendorId>AECAB</VendorId>
+		<VendorDescription>AEC AB, www.aec.se, support@aec.se</VendorDescription>
+	</AddIn>
+</RevitAddIns>

@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74FBC77E-2414-4BB1-BB6F-EF256E87C6D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BimkravRvt</RootNamespace>
+    <AssemblyName>BimkravRvt</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2020</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEBUG DEMO Sykehusbygg|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DEBUG DEMO Sykehusbygg\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2020</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEBUG DEMO Sykehusbygg|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DEBUG DEMO Sykehusbygg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEMO Sykehusbygg|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DEMO Sykehusbygg\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2020</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEMO Sykehusbygg|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DEMO Sykehusbygg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEBUG SANDBOX Sykehusbygg|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DEBUG SANDBOX Sykehusbygg\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2020</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEBUG SANDBOX Sykehusbygg|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\DEBUG SANDBOX Sykehusbygg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SANDBOX Sykehusbygg|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\SANDBOX Sykehusbygg\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2020</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SANDBOX Sykehusbygg|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\SANDBOX Sykehusbygg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2020_RELEASE|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;V2020</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <AssemblyName>BimKravRvt.v20.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2020_RELEASE|x64'">
+    <OutputPath>bin\x64\REVIT2020_RELEASE\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2020_DEBUG|AnyCPU'">
+    <DefineConstants>DEBUG;V2020</DefineConstants>
+    <OutputPath>bin\Debug\</OutputPath>
+    <AssemblyName>BimKravRvt.v20.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'REVIT2023_DEBUG|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;V2023</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <AssemblyName>BimKravRvt.v23.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'REVIT2023_DEBUG|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\REVIT2023_DEBUG\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2023_RELEASE|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;V2023</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <AssemblyName>BimKravRvt.v23.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2023_RELEASE|x64'">
+    <OutputPath>bin\x64\REVIT2023_RELEASE\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2021_DEBUG|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;V2021</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>BimKravRvt.v21.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2021_DEBUG|x64'">
+    <OutputPath>bin\x64\REVIT2021_DEBUG\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2022_DEBUG|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;V2022</DefineConstants>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>BimKravRvt.v22.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2022_DEBUG|x64'">
+    <OutputPath>bin\x64\REVIT2022_DEBUG\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2021_RELEASE|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;V2021</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <AssemblyName>BimKravRvt.v21.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2021_RELEASE|x64'">
+    <OutputPath>bin\x64\REVIT2021_RELEASE\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2022_RELEASE|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;V2022</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <AssemblyName>BimKravRvt.v22.0</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2022_RELEASE|x64'">
+    <OutputPath>bin\x64\REVIT2022_RELEASE\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2023_RELEASE|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2023_DEBUG|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2020_DEBUG|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2020_RELEASE|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2021_DEBUG|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2021\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2021\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2021\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2021_RELEASE|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2021\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2021\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2021\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2022_DEBUG|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2022_RELEASE|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)' == 'REVIT2020_RELEASE|AnyCPU'">
+    <Reference Include="AdWindows">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\AdWindows.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\BimLookup\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlConnector, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\..\BimLookup\packages\MySqlConnector.1.3.14\lib\net471\MySqlConnector.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RestSharp, Version=108.0.2.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.108.0.2\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <!--
+    <Reference Include="RevitAPI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>C:\Program Files\Autodesk\Revit 2020\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+	-->
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\BimLookup\packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\BimLookup\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\BimLookup\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\BimLookup\packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\BimLookup\packages\System.Text.Json.5.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Execution\IfcAvailable.cs" />
+    <Compile Include="Execution\ImportAvailable.cs" />
+    <Compile Include="Execution\CreateIFCSetup.cs" />
+    <Compile Include="Execution\ImportParameters.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Execution\Settings.cs" />
+    <Compile Include="UserInterface\ConfirmParameters.xaml.cs">
+      <DependentUpon>ConfirmParameters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ParametersVM.cs" />
+    <Compile Include="UserInterface\ProjectDiscipline.cs" />
+    <Compile Include="UserInterface\SettingsVM.cs" />
+    <Compile Include="UserInterface\SettingsWin.xaml.cs">
+      <DependentUpon>SettingsWin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\NotifierBase.cs" />
+    <Compile Include="Utils\Registry.cs" />
+    <Compile Include="Utils\Ribbon.cs" />
+    <Compile Include="Utils\Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Bimkrav.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ifcsetup16.png" />
+    <EmbeddedResource Include="Resources\ifcsetup32.png" />
+    <EmbeddedResource Include="Resources\import16.png" />
+    <EmbeddedResource Include="Resources\import32.png" />
+    <EmbeddedResource Include="Resources\settings16.png" />
+    <EmbeddedResource Include="Resources\settings32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\connect16.png" />
+    <EmbeddedResource Include="Resources\connect32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UserInterface\ConfirmParameters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserInterface\SettingsWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bimkrav.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BimLookup2\BIMLookup.NetApi\BIMLookup.NetApi.csproj">
+      <Project>{98c7b62c-ba35-49dd-b4e5-77375b818c33}</Project>
+      <Name>BIMLookup.NetApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>REM IF EXIST "C:\Tools\signtool.exe" ("C:\Tools\signtool.exe" sign /f "E:\GitHub\BadMonkeysLtd.pfx" /p %25signpass%25 /tr http://timestamp.comodoca.com /td sha256 "$(TargetPath)")
+
+
+REM xcopy /Q/Y "$(TargetPath)" "%25LocalAppData%25\Bimkrav\"
+
+REM IF NOT EXIST "%25AppData%25\Autodesk\Revit\Addins\2019\Bimkrav.addin" (copy /Y  "$(TargetDir)Bimkrav.addin" "%25AppData%25\Autodesk\Revit\Addins\2019\Bimkrav.addin")</PostBuildEvent>
+  </PropertyGroup>
+</Project>

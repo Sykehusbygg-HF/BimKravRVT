@@ -1,0 +1,53 @@
+﻿<Window x:Class="BimkravRvt.UserInterface.ConfirmParameters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:self="clr-namespace:BimkravRvt.UserInterface"
+        xmlns:p="clr-namespace:BimkravRvt.Properties"
+        xmlns:local="clr-namespace:BimkravRvt.UserInterface"
+        mc:Ignorable="d" 
+        Title="Import Parameters"
+        Height="{Binding Source={x:Static p:Settings.Default}, Path=ImportWinHeight, Mode=TwoWay}"
+        Width="{Binding Source={x:Static p:Settings.Default}, Path=ImportWinWidth, Mode=TwoWay}"
+        Top="{Binding Source={x:Static p:Settings.Default}, Path=ImportWinTop, Mode=TwoWay}"
+        Left="{Binding Source={x:Static p:Settings.Default}, Path=ImportWinLeft, Mode=TwoWay}"
+        MinHeight="150" 
+        MaxHeight="1000" 
+        MinWidth="230" 
+        MaxWidth="400" 
+        ShowInTaskbar="False">
+    <Window.Resources>
+        <Style x:Key="TreeViewItemStyle_ExpandAll" TargetType="{x:Type TreeViewItem}">
+            <Setter Property="IsExpanded" Value="True"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel Margin="10">
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Click="Import_Click" Content="Import" Margin="7.5" Width="75" Height="Auto"/>
+        </Grid>
+        <TreeView Name="trvParameters"
+                  ItemContainerStyle="{StaticResource TreeViewItemStyle_ExpandAll}" 
+                  ItemsSource="{Binding}">
+            <TreeView.Resources>
+                <HierarchicalDataTemplate DataType="{x:Type self:ParameterGroup}" ItemsSource="{Binding BimkravParameters}" >
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding GroupIsChecked}" Visibility="{Binding Path=ShowCheckbox, Mode=OneWay}" IsThreeState="True" ClipToBounds="True" Click="CheckBoxGroup_Click"/>
+                        <TextBlock Text="{Binding Title}" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+                <DataTemplate DataType="{x:Type self:BimkravParameter}">
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding IsChecked}" Visibility="{Binding Path=ShowCheckbox, Mode=OneWay}" Click="SglCheckBox_Click"/>
+                        <TextBlock Text="{Binding ParameterName}" />
+                    </StackPanel>
+                </DataTemplate>
+            </TreeView.Resources>
+        </TreeView>
+    </DockPanel>
+</Window>

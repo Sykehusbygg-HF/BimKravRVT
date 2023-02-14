@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BimkravRvt.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ImportWinTop" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ImportWinLeft" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ImportWinWidth" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">350</Value>
+    </Setting>
+    <Setting Name="ImportWinHeight" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="SettingsWinWidth" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">800</Value>
+    </Setting>
+    <Setting Name="SettingsWinTop" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="SettingsWinLeft" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ConnectWinTop" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ConnectWinLeft" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,101 @@
+﻿<Window x:Class="BimkravRvt.UserInterface.SettingsWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:BimkravRvt.UserInterface"
+        xmlns:p="clr-namespace:BimkravRvt.Properties"
+        mc:Ignorable="d"
+        Title="Settings"
+        Height="245"
+        Width="{Binding Source={x:Static p:Settings.Default}, Path=SettingsWinWidth, Mode=TwoWay}"
+        Top="{Binding Source={x:Static p:Settings.Default}, Path=SettingsWinTop, Mode=TwoWay}"
+        Left="{Binding Source={x:Static p:Settings.Default}, Path=SettingsWinLeft, Mode=TwoWay}"
+        MinWidth="500"
+        MaxWidth="1200"
+        MinHeight="245"
+        MaxHeight="245">
+    <Window.Resources>
+        <Style x:Key="TextBox_CenterAlignment" TargetType="{x:Type TextBox}">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Click="Save_Click" Content="Save" Margin="7.5" Width="75" Height="Auto"/>
+        </Grid>
+
+        <Grid DockPanel.Dock="Top" Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Discipline"/>
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Disciplines}" SelectedItem="{Binding Discipline}"/>
+
+            <Label Name ="ConnectionLabel" Grid.Column="2" Content="Connection"/>
+            <ComboBox Name ="ConnectionCombo" Grid.Column="3" ItemsSource="{Binding Connections}" SelectedItem="{Binding Connection}"/>
+            
+        </Grid>
+
+        <Grid DockPanel.Dock="Top" Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Project"/>
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Projects}" SelectedItem="{Binding Project}"/>
+
+        </Grid>
+
+        <Grid DockPanel.Dock="Top" Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Phase"/>
+            <ComboBox Grid.Column="1" ItemsSource="{x:Static local:PhaseList.GetEnumTypes}" SelectedItem="{Binding Phase}"/>
+        </Grid>
+        <Grid DockPanel.Dock="Top" Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Shared parameter file"/>
+            <TextBox Grid.Column="1" Text="{Binding SharedFilePath}" Height="20" Style="{StaticResource TextBox_CenterAlignment}" />
+            <Button Grid.Column="2" Name="SharedBrowse" Click="Browse_Click" Content="Browse" Margin="9 5 0 5" Width="75" Height="Auto"/>
+            <Button Grid.Column="3" Name="SharedCreate" Click="Create_Click" Content="Create" Margin="0 5 9 5" Width="75" Height="Auto"/>
+        </Grid>
+
+        <Grid DockPanel.Dock="Top" Margin="2.5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Label Content="IFC export setup file" />
+            <TextBox Grid.Column="1" Text="{Binding IFCSetupFilePath}" Height="20" Style="{StaticResource TextBox_CenterAlignment}" />
+            <Button Grid.Column="2" Name="IFCBrowse" Click="Browse_Click" Content="Browse" Margin="9 5 0 5" Width="75" Height="Auto"/>
+            <Button Grid.Column="3" Name="IFCCreate" Click="Create_Click" Content="Create" Margin="0 5 9 5" Width="75" Height="Auto"/>
+        </Grid>
+        <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </DockPanel>
+</Window>
